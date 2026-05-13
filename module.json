@@ -1,35 +1,37 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
-  "version": "#{VERSION}#",
+  "id": "valks-cyberpunk-red-additions",
+  "title": "Valk's Cyberpunk Red Additions",
+  "description": "Includes various GM tools to help facilitate Cyberpunk Red system games.",
+  "version": "0.1.0",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
+    "minimum": 12,
+    "verified": 12,
+    "maximum": 12
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "valkeryie666",
+      "url": "https://github.com/valkeryie666"
     }
   ],
   "relationships": {
-    "systems": [],
+    "systems": [
+      {
+        "id": "cyberpunk-red-core",
+        "type": "system",
+        "compatibility": {
+          "maximum": "v0.99.99",
+          "verified": "v0.92.0"
+        }
+      }
+    ],
     "requires": []
   },
-  "esmodules": [
-    "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
+  "socket": true,
+  "esmodules": ["scripts/module.js"],
+  "styles": ["styles/module.css"],
   "languages": [
     {
       "lang": "en",
@@ -37,15 +39,7 @@
       "path": "languages/en.json"
     }
   ],
-  "url": "#{URL}#",
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "url": "https://github.com/valkeryie666/valks-cyberpunk-red-additions",
+  "manifest": "https://github.com/valkeryie666/valks-cyberpunk-red-additions/releases/latest/download/module.json",
+  "download": "https://github.com/valkeryie666/valks-cyberpunk-red-additions/releases/latest/download/module.zip"
 }

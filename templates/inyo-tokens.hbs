@@ -1,0 +1,39 @@
+<div class="vcpra-window">
+    {{#if hasPlayers}}
+    <ul class="vcpra-list">
+        {{#each players}}
+        <li class="vcpra-player">
+            <img class="vcpra-avatar" src="{{characterImg}}" alt="{{characterName}}" />
+
+            <div class="inyo-info">
+                <div class="vcpra-character-name">
+                    {{characterName}}
+                </div>
+                <div class="vcpra-player-name">
+                    <span class="inyo-color-dot" style="background: {{color}};"></span>
+                    {{name}}
+                </div>
+            </div>
+
+            <label class="inyo-toggle">
+                <input type="checkbox" data-action="togglePlayer" data-user-id="{{id}}" {{disabled disabled}} {{checked checked}} />
+                <span />
+            </label>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p class="inyo-empty">No active players right now.</p>
+    {{/if}}
+    <footer class="sheet-footer flexrow">
+            {{#if isGM}}
+                <button type="reset" data-action="reset">
+                        <i class="fas fa-undo"></i>
+                        Reset Tokens
+                </button>
+            {{/if}}
+           <button type="button" data-action="refresh">
+                <i class="fas fa-refresh"></i>
+                Refresh List
+           </button> 
+    </footer>
+</div>
